@@ -55,6 +55,9 @@ class openresty {
 	     path => ['/usr/bin','/bin','/sbin','/usr/local/openresty/nginx/sbin'],
 	     command => 'nginx -p `pwd`/ -c conf/nginx.conf',
 	}
+node 'puppetagent.jetsynthesys.net' {
+include openresty
+}
 
 }
 
